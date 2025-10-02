@@ -22,13 +22,15 @@ public:
         gen.seed(static_cast<uint32_t>(t & 0xFFFFFFFF));
         memory.fill(0);
         lvl_game = 0;
+        input_sequence.fill(0);
+        input_index = 0;
     }
 
     std::array<uint,16>& go_minory() {
-    if (lvl_game < memory.size()) {
-        memory[lvl_game++] = dis(gen);
-    }
-    return memory;
+        if (lvl_game < memory.size()) {
+            memory[lvl_game++] = dis(gen);
+        }
+        return memory;
     }
 
     void blinkled_minory(uint GPIOLED) {
@@ -50,52 +52,60 @@ public:
                 gpio_put(RLED_PIN, 1);
             }
             sleep_ms(85);
+            if(win){
+                gpio_put(GLED_PIN, 0);
+            } else {
+                gpio_put(RLED_PIN, 0);
+            }
+            sleep_ms(125);
         }
     }
 
     void play_minory() {
-        for(auto val : memory) {
-            if (val == 1) {
-                blinkled_minory(RLED_PIN);
-            }
-            if (val == 2) {
-                blinkled_minory(GLED_PIN);
-            }
+        for (uint i = 0; i < lvl_game; i++) {
+            if (memory[i] == 1) blinkled_minory(RLED_PIN);
+            if (memory[i] == 2) blinkled_minory(GLED_PIN);
         }
     }
 
     bool trueorfalse_minory() {
-        if(input_sequence[input_index] == memory[lvl_game]) {
-            return true;
-        } else {
-            return false;
-        }
+        if (input_index == 0) return true;
+        if (input_index > lvl_game || input_index > input_sequence.size() || input_index > memory.size()) return false;
+        return input_sequence[input_index - 1] == memory[input_index - 1];
+    }
+
+    void reset_minory() {
+        input_index = 0;
+        input_sequence.fill(0);
     }
 
     bool read_buttons_minory() {
         left  = (gpio_get(LBTTN_PIN) == 0);
         right = (gpio_get(RBTTN_PIN) == 0);
 
-        if (left && input_index < 16) {
+        if (left && input_index < lvl_game) {
             input_sequence[input_index++] = 1;
             if (!trueorfalse_minory()) {
+                endofgame_minory(false);
+                reset_minory();
                 return false;
-            };
+            }
             sleep_ms(50);
         }
-        else if (right && input_index < 16) {
+        else if (right && input_index < lvl_game) {
             input_sequence[input_index++] = 2;
             if (!trueorfalse_minory()) {
                 endofgame_minory(false);
+                reset_minory();
                 return false;
-            };
+            }
             sleep_ms(50);
         }
-        if (input_index == 16) {
-            endofgame_minory(true);
+
+        if (input_index == lvl_game) {
+            // Sequence correct and complete, signal readiness for next level by resetting input state
+            reset_minory();
             return true;
         }
-        endofgame_minory(true);
-        return true;
     }
 };

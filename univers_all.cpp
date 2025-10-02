@@ -5,6 +5,8 @@
 #include "allpins.h"
 #include "overlibs/Patternbtn.h"
 
+Minorygame game;
+
 bool enabled = true;
 bool running = true;
 
@@ -24,10 +26,7 @@ void blink_end() {
     gpio_put(RLED_PIN, 0);
 }
 
-int main() {
-    absolute_time_t press_start_single = nil_time;
-    absolute_time_t press_start_double = nil_time;
-
+void setup() {
     // Кнопки
     gpio_init(LBTTN_PIN);
     gpio_set_dir(LBTTN_PIN, GPIO_IN);
@@ -47,24 +46,32 @@ int main() {
 
     gpio_init(GLED_PIN);
     gpio_set_dir(GLED_PIN, GPIO_OUT);
+}
 
-    bool left_PRESSED;
-    bool midle_PRESSED;
-    bool right_PRESSED;
+void loop(absolute_time_t &press_start_single, absolute_time_t &press_start_double) {
+    bool left_PRESSED = (gpio_get(LBTTN_PIN) == 0);
+    bool midle_PRESSED = (gpio_get(MBTTN_PIN) == 0);
+    bool right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
+
+    if(running) {
+        pattern_button(midle_PRESSED, press_start_single, game);
+    }
+    offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
+
+    if (!running) {
+        gpio_put(RLED_PIN, 1);
+        gpio_put(GLED_PIN, 1);
+    }
+}
+
+int main() {
+    absolute_time_t press_start_single = nil_time;
+    absolute_time_t press_start_double = nil_time;
+
+    setup();
 
     while (enabled) {
-        if(running) {
-            left_PRESSED = (gpio_get(LBTTN_PIN) == 0);
-            midle_PRESSED = (gpio_get(MBTTN_PIN) == 0);
-            right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
-            pattern_button(midle_PRESSED, press_start_single);
-            offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
-        } else {
-            offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
-            gpio_put(RLED_PIN, 1);
-            gpio_put(GLED_PIN, 1);
-        }
-        
+        loop(press_start_single, press_start_double);
         sleep_ms(10); // антидребезг
     }
 
