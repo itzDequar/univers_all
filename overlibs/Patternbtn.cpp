@@ -1,7 +1,4 @@
-#include <pico/types.h>
-#include <pico/time.h>
-#include <hardware/gpio.h>
-#include "allpins.h"
+#include "Patternbtn.h"
 
 bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, absolute_time_t &press_start) {
     if (pressed1 && pressed2) {
@@ -9,10 +6,7 @@ bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, a
             press_start = get_absolute_time();
         } else {
             int64_t elapsed_ms = absolute_time_diff_us(press_start, get_absolute_time()) / 1000;
-            if (elapsed_ms >= 3000) {
-                running = !running;
-            }
-            if (elapsed_ms >= 6000) {
+            if (elapsed_ms >= 5000) {
                 enabled = !enabled;
             }
         }

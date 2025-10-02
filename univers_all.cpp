@@ -45,10 +45,7 @@ void setup() {
     gpio_set_dir(GLED_PIN, GPIO_OUT);
 }
 
-void loop() {
-    absolute_time_t press_start_single = nil_time;
-    absolute_time_t press_start_double = nil_time;
-
+void loop(absolute_time_t &press_start_single, absolute_time_t &press_start_double) {
     bool left_PRESSED = (gpio_get(LBTTN_PIN) == 0);
     bool midle_PRESSED = (gpio_get(MBTTN_PIN) == 0);
     bool right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
@@ -65,11 +62,14 @@ void loop() {
 }
 
 int main() {
+    absolute_time_t press_start_single = nil_time;
+    absolute_time_t press_start_double = nil_time;
+
     setup();
 
     while (enabled) {
-        loop();
-        sleep_ms(10); // антидребезг
+        loop(press_start_single, press_start_double);
+        sleep_ms(10);
     }
 
     blink_end();
