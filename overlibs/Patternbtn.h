@@ -35,7 +35,11 @@ bool pattern_button(bool pressed, absolute_time_t &press_start) {
                     memory = game.go_minory();
                     game.play_minory();
                     while (checking) {
-                        
+                        if(game.read_buttons_minory()) {
+                            game.endofgame_minory(true);
+                        } else {
+                            game.endofgame_minory(false);
+                        }
                     }
                 }                
             }

@@ -42,6 +42,17 @@ public:
         gpio_put(GPIOLED, 0);
     }
 
+    void endofgame_minory(bool win) {
+        for (uint i = 0; i < 10; i++) {
+            if(win){
+                gpio_put(GLED_PIN, 1);
+            } else {
+                gpio_put(RLED_PIN, 1);
+            }
+            sleep_ms(85);
+        }
+    }
+
     void play_minory() {
         for(auto val : memory) {
             if (val == 1) {
@@ -53,7 +64,7 @@ public:
         }
     }
 
-    bool trueorfalse() {
+    bool trueorfalse_minory() {
         if(input_sequence[input_index] == memory[lvl_game]) {
             return true;
         } else {
@@ -61,19 +72,27 @@ public:
         }
     }
 
-    bool read_buttons() {
+    bool read_buttons_minory() {
         left  = (gpio_get(LBTTN_PIN) == 0);
         right = (gpio_get(RBTTN_PIN) == 0);
 
         if (left && input_index < 16) {
             input_sequence[input_index++] = 1;
-
+            if (!trueorfalse_minory()) {
+                return false;
+            };
             sleep_ms(50);
         }
         else if (right && input_index < 16) {
             input_sequence[input_index++] = 2;
+            if (!trueorfalse_minory()) {
+                return false;
+            };
             sleep_ms(50);
         }
-
+        if (input_index == 16) {
+            return true;
+        }
+        
     }
 };
