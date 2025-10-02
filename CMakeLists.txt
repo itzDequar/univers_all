@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(univers_all univers_all.cpp overlibs/Minory.cpp overlibs/Patternbtn.cpp)
+add_executable(univers_all univers_all.cpp overlibs/Minory.cpp)
 
 pico_set_program_name(univers_all "univers_all")
 pico_set_program_version(univers_all "0.1")

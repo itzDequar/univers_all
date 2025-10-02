@@ -1,5 +1,5 @@
 #include "hardware/gpio.h"
-#include "overlibs/Patternbtn.cpp"
+#include "overlibs/Patternbtn.h"
 #include <pico/time.h>
 #include "allpins.h"
 

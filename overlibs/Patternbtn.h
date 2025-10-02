@@ -4,7 +4,7 @@
 #include "Minory.cpp"
 #include "allpins.h"
 
-bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, absolute_time_t &press_start) {
+inline bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, absolute_time_t &press_start) {
     if (pressed1 && pressed2) {
         if (is_nil_time(press_start)) {
             press_start = get_absolute_time();
@@ -23,7 +23,7 @@ bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, a
         return false;
     }
 }
-bool pattern_button(bool pressed, absolute_time_t &press_start) {
+inline bool pattern_button(bool pressed, absolute_time_t &press_start) {
     if (pressed) {
         if (is_nil_time(press_start)) {
             press_start = get_absolute_time();
