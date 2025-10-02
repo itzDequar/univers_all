@@ -86,13 +86,16 @@ public:
         else if (right && input_index < 16) {
             input_sequence[input_index++] = 2;
             if (!trueorfalse_minory()) {
+                endofgame_minory(false);
                 return false;
             };
             sleep_ms(50);
         }
         if (input_index == 16) {
+            endofgame_minory(true);
             return true;
         }
-        
+        endofgame_minory(true);
+        return true;
     }
 };
