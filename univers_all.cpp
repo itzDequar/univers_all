@@ -49,16 +49,9 @@ void loop(absolute_time_t &press_start_single, absolute_time_t &press_start_doub
     bool left_PRESSED = (gpio_get(LBTTN_PIN) == 0);
     bool midle_PRESSED = (gpio_get(MBTTN_PIN) == 0);
     bool right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
-
-    if(running) {
-        pattern_button(midle_PRESSED, press_start_single);
-        offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
-    }
-
-    if (!running) {
-        gpio_put(RLED_PIN, 1);
-        gpio_put(GLED_PIN, 1);
-    }
+    
+    pattern_button(midle_PRESSED, press_start_single);
+    offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
 }
 
 int main() {
