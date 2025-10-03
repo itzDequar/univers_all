@@ -16,6 +16,7 @@ bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, a
         return false;
     }
 }
+
 bool pattern_button(bool pressed, absolute_time_t &press_start) {
     if (pressed) {
         if (is_nil_time(press_start)) {
