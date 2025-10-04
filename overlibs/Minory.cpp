@@ -6,7 +6,7 @@ Minory::Minory() : gen(rd()), dist(1, 2){
 Minory::~Minory() {
     memory.clear();
     input.clear();
-    lvl_game = 0;
+    lvl_game = 1;
 }
 
 void Minory::gameover_minory() {
@@ -63,7 +63,6 @@ bool Minory::input_minory() {
     while (i) {
         left = ( gpio_get(LBTTN_PIN) == 0 );
         right = ( gpio_get(RBTTN_PIN) == 0 );
-        if (lvl_game == MAX_GAME) return false;
 
         if(left) {
             input.push_back(1);
@@ -78,9 +77,13 @@ bool Minory::input_minory() {
         };
 
         if (input.size() == memory.size()) {
-            if (checkit_minory() == false) return false;
-            input.clear();
-            i = false;
+            if (checkit_minory() == false) {
+                input.clear();
+                return false;
+            } else {
+                input.clear();
+                return true;
+            }
         }
     }
 }
@@ -88,10 +91,11 @@ bool Minory::input_minory() {
 void Minory::play_minory() {
     addmore_minory();
     playled_minory();
-    if (!input_minory()) {
+    if (input_minory() == false) {
         gameover_minory();
         return;
     } else {
         gamewin_minory();
+        return;
     }
 }
