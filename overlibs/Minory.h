@@ -14,7 +14,7 @@ class Minory{
     std::mt19937 gen;
     std::uniform_int_distribution<int> dist;
 
-    unsigned char MAX_GAME = 8;
+    unsigned char MAX_GAME = 18;
     unsigned char lvl_game = 1;
     std::vector<unsigned char> memory;
     unsigned char input = 0;

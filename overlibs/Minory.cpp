@@ -78,7 +78,7 @@ unsigned char Minory::input_minory() {
             quit = get_absolute_time();
             } else {
                 int64_t elapsed_ms = absolute_time_diff_us(quit, get_absolute_time()) / 1000;
-                if (elapsed_ms >= 5000) {
+                if (elapsed_ms >= 3000) {
                     return 10;
                 }
             }
