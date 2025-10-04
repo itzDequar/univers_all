@@ -44,23 +44,23 @@ void setup() {
     gpio_set_dir(GLED_PIN, GPIO_OUT);
 }
 
-void loop(absolute_time_t &press_start_single, absolute_time_t &press_start_double) {
+void loop(absolute_time_t &press_offon, absolute_time_t &press_any) {
     bool left_PRESSED = (gpio_get(LBTTN_PIN) == 0);
     bool midle_PRESSED = (gpio_get(MBTTN_PIN) == 0);
     bool right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
 
-    pattern_button(midle_PRESSED, press_start_single);
-    offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_start_double);
+    offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_offon);
+    pattern_button(midle_PRESSED, press_any);
 }
 
 int main() {
-    absolute_time_t press_start_single = nil_time;
-    absolute_time_t press_start_double = nil_time;
+    absolute_time_t press_offon = nil_time;
+    absolute_time_t press_any = nil_time;
 
     setup();
 
     while (enabled) {
-        loop(press_start_single, press_start_double);
+        loop(press_offon, press_any);
         sleep_ms(10);
     }
 

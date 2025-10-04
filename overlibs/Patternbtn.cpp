@@ -17,15 +17,15 @@ bool offon_pattern(bool pressed1, bool pressed2, bool &running, bool &enabled, a
     }
 }
 
-bool pattern_button(bool pressed, absolute_time_t &press_start) {
+bool any_pattern(bool pressed, absolute_time_t &press_start) {
     if (pressed) {
         if (is_nil_time(press_start)) {
             press_start = get_absolute_time();
         } else {
             int64_t elapsed_ms = absolute_time_diff_us(press_start, get_absolute_time()) / 1000;
             if (elapsed_ms >= 200) {
-                gpio_put(RLED_PIN, 1);
-                gpio_put(GLED_PIN, 1);
+                Minory game;
+                game.play_minory();
             }
         }
         return true;
