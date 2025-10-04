@@ -50,7 +50,7 @@ void loop(absolute_time_t &press_offon, absolute_time_t &press_any) {
     bool right_PRESSED = (gpio_get(RBTTN_PIN) == 0);
 
     offon_pattern(left_PRESSED, right_PRESSED, running, enabled, press_offon);
-    pattern_button(midle_PRESSED, press_any);
+    any_pattern(midle_PRESSED, press_any);
 }
 
 int main() {
