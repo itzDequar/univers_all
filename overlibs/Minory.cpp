@@ -1,6 +1,6 @@
 #include "Minory.h"
 
-Minory::Minory() : gen(rd()), dist(1, 2){
+Minory::Minory() : gen(static_cast<unsigned>(time(nullptr))), dist(1, 2){
 
 }
 Minory::~Minory() {
@@ -8,7 +8,7 @@ Minory::~Minory() {
 }
 
 void Minory::gamefinish_minory() {
-    for (uint i = 0; i < 15; i++) {
+    for (unsigned char i = 0; i < 8; i++) {
         gpio_put(RLED_PIN, 1);
         gpio_put(GLED_PIN, 0);
         sleep_ms(85);
@@ -20,7 +20,7 @@ void Minory::gamefinish_minory() {
     gpio_put(GLED_PIN, 0);
 }
 void Minory::gameover_minory() {
-    for (uint i = 0; i < 12; i++) {
+    for (unsigned char i = 0; i < 5; i++) {
         gpio_put(RLED_PIN, 1);
         sleep_ms(100);
         gpio_put(RLED_PIN, 0);
@@ -28,7 +28,7 @@ void Minory::gameover_minory() {
     }
 }
 void Minory::gamewin_minory() {
-    for (uint i = 0; i < 12; i++) {
+    for (unsigned char i = 0; i < 5; i++) {
         gpio_put(GLED_PIN, 1);
         sleep_ms(100);
         gpio_put(GLED_PIN, 0);
@@ -36,12 +36,7 @@ void Minory::gamewin_minory() {
     }
 }
 
-bool Minory::checkit_minory() {
-    if (input == memory) return true;
-    if (input != memory) return false;
-}
-
-void Minory::blinkled_minory(uint rorg) {
+void Minory::blinkled_minory(unsigned char rorg) {
     sleep_ms(750);
     if (rorg == 1) gpio_put(RLED_PIN, 1);
     if (rorg == 2) gpio_put(GLED_PIN, 1);
@@ -51,7 +46,7 @@ void Minory::blinkled_minory(uint rorg) {
 }
 
 void Minory::playled_minory() {
-    for (uint n : memory) {
+    for (unsigned char n : memory) {
         if(n == 1) blinkled_minory(1);
         if(n == 2) blinkled_minory(2);
     }
@@ -63,7 +58,7 @@ void Minory::addmore_minory() {
 
 void Minory::clearall_minory() {
     memory.clear();
-    input.clear();
+    input = 0;
     lvl_game = 1;
 }
 
@@ -75,26 +70,23 @@ bool Minory::input_minory() {
         right = ( gpio_get(RBTTN_PIN) == 0 );
 
         if(left) {
-            input.push_back(1);
+            if (memory[input] != 1) return false;
+            input++;
             while (gpio_get(LBTTN_PIN) == 0) {
                 sleep_ms(10);
             }
         } else if(right) {
-            input.push_back(2);
+            if (memory[input] != 2) return false;
+            input++;
             while (gpio_get(RBTTN_PIN) == 0) {
                 sleep_ms(10);
             }
         };
 
-        if (input.size() == memory.size()) {
-            if (checkit_minory() == false) {
-                clearall_minory();
-                return false;
-            } else {
-                lvl_game++;
-                input.clear();
-                return true;
-            }
+        if (input == memory.size()) {
+            lvl_game++;
+            input = 0;
+            return true;
         }
     }
 }
