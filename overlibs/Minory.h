@@ -13,11 +13,12 @@ class Minory{
     std::mt19937 gen;
     std::uniform_int_distribution<int> dist;
 
-    uint MAX_GAME = 5;
+    uint MAX_GAME = 8;
     uint lvl_game = 1;
     std::vector<uint> memory;
     std::vector<uint> input;
    
+    void gamefinish_minory();
     void gamewin_minory();
     void gameover_minory();
     bool checkit_minory();
@@ -29,7 +30,7 @@ class Minory{
 
     public:
     
-    void play_minory();
+    bool play_minory();
     Minory();
     ~Minory();
 };
