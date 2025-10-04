@@ -63,7 +63,7 @@ bool Minory::input_minory() {
     while (i) {
         left = ( gpio_get(LBTTN_PIN) == 0 );
         right = ( gpio_get(RBTTN_PIN) == 0 );
-        if (lvl_game == MAX_GAME) return;
+        if (lvl_game == MAX_GAME) return false;
 
         if(left) {
             input.push_back(1);
