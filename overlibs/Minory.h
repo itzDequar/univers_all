@@ -25,7 +25,7 @@ class Minory{
     void blinkled_minory(unsigned char rorg);
     void playled_minory();
     void addmore_minory();
-    bool input_minory();
+    unsigned char input_minory();
     void clearall_minory();
 
     public:

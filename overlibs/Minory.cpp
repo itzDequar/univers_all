@@ -37,7 +37,7 @@ void Minory::gamewin_minory() {
 }
 
 void Minory::blinkled_minory(unsigned char rorg) {
-    sleep_ms(750);
+    sleep_ms(250);
     if (rorg == 1) gpio_put(RLED_PIN, 1);
     if (rorg == 2) gpio_put(GLED_PIN, 1);
     sleep_ms((500 / lvl_game)+100);
@@ -62,21 +62,35 @@ void Minory::clearall_minory() {
     lvl_game = 1;
 }
 
-bool Minory::input_minory() {
+unsigned char Minory::input_minory() {
     bool left;
+    bool mid;
     bool right;
+    absolute_time_t quit = nil_time;
+
     while (1) {
         left = ( gpio_get(LBTTN_PIN) == 0 );
+        mid = ( gpio_get(MBTTN_PIN) == 0 );
         right = ( gpio_get(RBTTN_PIN) == 0 );
 
+        if(mid) {
+            if (is_nil_time(quit)) {
+            quit = get_absolute_time();
+            } else {
+                int64_t elapsed_ms = absolute_time_diff_us(quit, get_absolute_time()) / 1000;
+                if (elapsed_ms >= 5000) {
+                    return 10;
+                }
+            }
+        }
         if(left) {
-            if (memory[input] != 1) return false;
+            if (memory[input] != 1) return 0;
             input++;
             while (gpio_get(LBTTN_PIN) == 0) {
                 sleep_ms(10);
             }
         } else if(right) {
-            if (memory[input] != 2) return false;
+            if (memory[input] != 2) return 0;
             input++;
             while (gpio_get(RBTTN_PIN) == 0) {
                 sleep_ms(10);
@@ -86,7 +100,7 @@ bool Minory::input_minory() {
         if (input == memory.size()) {
             lvl_game++;
             input = 0;
-            return true;
+            return 1;
         }
     }
 }
@@ -95,12 +109,23 @@ bool Minory::play_minory() {
     while(1) {
         addmore_minory();
         playled_minory();
-        if (!input_minory()) {
-            gameover_minory();
-            return false;
-        } else {
-            gamewin_minory();
+        switch (input_minory()) {
+            case 0:
+                gameover_minory();
+                return false;
+                break;
+            case 1:
+                gamewin_minory();
+                break;
+            case 10:
+                gamefinish_minory();
+                return false;
+                break;
+
+            default:
+                break;
         }
+
         if (lvl_game > MAX_GAME) {
             clearall_minory();
             gamefinish_minory();

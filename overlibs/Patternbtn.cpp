@@ -26,9 +26,7 @@ bool any_pattern(bool pressed, absolute_time_t &press_start) {
         } else {
             int64_t elapsed_ms = absolute_time_diff_us(press_start, get_absolute_time()) / 1000;
             if (elapsed_ms >= 200) {
-                if(!game.play_minory()) {
-                    game.~Minory();
-                };
+                
             }
         }
         return true;
