@@ -315,9 +315,9 @@ Discarded input sections
  .text._ZN6Minory14gamewin_minoryEv
                 0x00000000       0x2c CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
  .text._ZN6Minory15blinkled_minoryEh
-                0x00000000       0x60 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+                0x00000000       0x5c CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
  .text._ZN6Minory14playled_minoryEv
-                0x00000000       0x68 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+                0x00000000       0x64 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
  .text._ZN6Minory15clearall_minoryEv
                 0x00000000       0x20 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
  .text          0x00000000        0x0 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
@@ -6563,50 +6563,51 @@ LOAD /Users/qyour/.pico-sdk/toolchain/14_2_Rel1/bin/../lib/gcc/arm-none-eabi/14.
                 0x100005ac      0x18c CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
                 0x100005ac                Minory::addmore_minory()
  .text._ZN6Minory11play_minoryEv
-                0x10000738      0x168 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+                0x10000738      0x164 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
                 0x10000738                Minory::play_minory()
  .text._Z13offon_patternbbRbS_Ry
-                0x100008a0       0x60 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
-                0x100008a0                offon_pattern(bool, bool, bool&, bool&, unsigned long long&)
+                0x1000089c       0x60 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
+                0x1000089c                offon_pattern(bool, bool, bool&, bool&, unsigned long long&)
  .text._Z11any_patternbRy
-                0x10000900       0x70 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
-                0x10000900                any_pattern(bool, unsigned long long&)
+                0x100008fc       0x70 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
+                0x100008fc                any_pattern(bool, unsigned long long&)
  .text.gpio_set_pulls
-                0x10000970       0x28 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10000970                gpio_set_pulls
+                0x1000096c       0x28 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x1000096c                gpio_set_pulls
  .text.gpio_init
-                0x10000998       0x48 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10000998                gpio_init
- .text.panic    0x100009e0       0x30 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
-                0x100009e0                panic
+                0x10000994       0x48 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10000994                gpio_init
+ .text.panic    0x100009dc       0x30 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+                0x100009dc                panic
  .text.hw_claim_or_assert
-                0x10000a10       0x58 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
-                0x10000a10                hw_claim_or_assert
+                0x10000a0c       0x58 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x10000a0c                hw_claim_or_assert
  .text.next_striped_spin_lock_num
-                0x10000a68       0x18 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
-                0x10000a68                next_striped_spin_lock_num
+                0x10000a64       0x18 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x10000a64                next_striped_spin_lock_num
  .text.spinlock_set_extexclall
-                0x10000a80       0x10 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x10000a7c       0x10 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .text.spin_locks_reset
-                0x10000a90       0x18 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-                0x10000a90                spin_locks_reset
+                0x10000a8c       0x18 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x10000a8c                spin_locks_reset
  .text.runtime_init_per_core_irq_priorities
-                0x10000aa8       0x40 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000aa8                runtime_init_per_core_irq_priorities
+                0x10000aa4       0x40 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000aa4                runtime_init_per_core_irq_priorities
  .text.irq_set_enabled
-                0x10000ae8       0x2c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000ae8                irq_set_enabled
+                0x10000ae4       0x2c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000ae4                irq_set_enabled
  .text.irq_set_exclusive_handler
-                0x10000b14       0x60 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
-                0x10000b14                irq_set_exclusive_handler
+                0x10000b10       0x60 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x10000b10                irq_set_exclusive_handler
  .text.lock_init
-                0x10000b74        0xc CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
-                0x10000b74                lock_init
+                0x10000b70        0xc CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x10000b70                lock_init
  .text.runtime_init_mutex
-                0x10000b80       0x4c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
-                0x10000b80                runtime_init_mutex
+                0x10000b7c       0x4c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x10000b7c                runtime_init_mutex
  .text.sleep_until_callback
-                0x10000bcc       0x3c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x10000bc8       0x3c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ *fill*         0x10000c04        0x4 
  .text.alarm_pool_irq_handler
                 0x10000c08      0x2f0 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .text.runtime_init_default_alarm_pool
@@ -8895,38 +8896,38 @@ LOAD linker stubs
  .comment       0x00000045       0x46 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .comment       0x00000045       0x46 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
-.debug_info     0x00000000    0x3418c
+.debug_info     0x00000000    0x3418f
  .debug_info    0x00000000     0x2e60 CMakeFiles/univers_all.dir/univers_all.cpp.o
- .debug_info    0x00002e60     0xc2ba CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
- .debug_info    0x0000f11a     0x73fc CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
- .debug_info    0x00016516     0x2416 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x0001892c      0x1be CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x00018aea      0xb78 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_info    0x00019662      0x46f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x00019ad1     0x145e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x0001af2f     0x262d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x0001d55c      0x187 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_info    0x0001d6e3     0x1e7c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_info    0x0001f55f     0x5492 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_info    0x000249f1     0x30c6 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x00027ab7     0x28c2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x0002a379      0x507 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x0002a880      0x26c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x0002aaec     0x10ab CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x0002bb97      0x1c4 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_info    0x0002bd5b      0x316 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_info    0x0002c071      0x1b1 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x0002c222      0x21a CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x0002c43c     0x1c34 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x0002e070      0x7c9 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x0002e839       0x23 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_dcp.S.o
- .debug_info    0x0002e85c      0x3e4 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_info    0x0002ec40      0x6ff CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
- .debug_info    0x0002f33f      0x2e2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x0002f621     0x22ff CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x00031920       0x23 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x00031943      0xc25 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x00032568     0x1c24 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x00002e60     0xc2bd CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+ .debug_info    0x0000f11d     0x73fc CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
+ .debug_info    0x00016519     0x2416 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x0001892f      0x1be CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x00018aed      0xb78 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_info    0x00019665      0x46f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x00019ad4     0x145e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x0001af32     0x262d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x0001d55f      0x187 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x0001d6e6     0x1e7c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_info    0x0001f562     0x5492 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_info    0x000249f4     0x30c6 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x00027aba     0x28c2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x0002a37c      0x507 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x0002a883      0x26c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x0002aaef     0x10ab CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x0002bb9a      0x1c4 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_info    0x0002bd5e      0x316 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_info    0x0002c074      0x1b1 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x0002c225      0x21a CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x0002c43f     0x1c34 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x0002e073      0x7c9 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x0002e83c       0x23 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_dcp.S.o
+ .debug_info    0x0002e85f      0x3e4 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_info    0x0002ec43      0x6ff CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+ .debug_info    0x0002f342      0x2e2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x0002f624     0x22ff CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x00031923       0x23 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x00031946      0xc25 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x0003256b     0x1c24 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
 .debug_abbrev   0x00000000     0x6e81
  .debug_abbrev  0x00000000      0x5ac CMakeFiles/univers_all.dir/univers_all.cpp.o
@@ -8962,61 +8963,61 @@ LOAD linker stubs
  .debug_abbrev  0x00006884      0x5fd CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
 .debug_loclists
-                0x00000000    0x10b41
+                0x00000000    0x10ba1
  .debug_loclists
                 0x00000000      0x427 CMakeFiles/univers_all.dir/univers_all.cpp.o
  .debug_loclists
-                0x00000427     0x18c9 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+                0x00000427     0x1929 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
  .debug_loclists
-                0x00001cf0      0x1ec CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
+                0x00001d50      0x1ec CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
  .debug_loclists
-                0x00001edc     0x17d5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+                0x00001f3c     0x17d5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_loclists
-                0x000036b1      0x42d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+                0x00003711      0x42d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
  .debug_loclists
-                0x00003ade      0x132 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+                0x00003b3e      0x132 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
  .debug_loclists
-                0x00003c10       0xa2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x00003c70       0xa2 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_loclists
-                0x00003cb2     0x1034 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+                0x00003d12     0x1034 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
  .debug_loclists
-                0x00004ce6       0x17 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+                0x00004d46       0x17 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
  .debug_loclists
-                0x00004cfd      0xae7 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+                0x00004d5d      0xae7 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
  .debug_loclists
-                0x000057e4     0x2c58 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+                0x00005844     0x2c58 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
  .debug_loclists
-                0x0000843c     0x1a3f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+                0x0000849c     0x1a3f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
  .debug_loclists
-                0x00009e7b     0x2038 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+                0x00009edb     0x2038 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_loclists
-                0x0000beb3      0x1b7 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+                0x0000bf13      0x1b7 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
  .debug_loclists
-                0x0000c06a       0x8b CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+                0x0000c0ca       0x8b CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_loclists
-                0x0000c0f5      0x812 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x0000c155      0x812 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_loclists
-                0x0000c907       0x28 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+                0x0000c967       0x28 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
  .debug_loclists
-                0x0000c92f       0x78 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+                0x0000c98f       0x78 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
  .debug_loclists
-                0x0000c9a7       0x48 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+                0x0000ca07       0x48 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_loclists
-                0x0000c9ef       0x7e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+                0x0000ca4f       0x7e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
  .debug_loclists
-                0x0000ca6d      0x129 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x0000cacd      0x129 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_loclists
-                0x0000cb96       0x74 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x0000cbf6       0x74 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_loclists
-                0x0000cc0a      0x14b CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+                0x0000cc6a      0x14b CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
  .debug_loclists
-                0x0000cd55       0x80 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+                0x0000cdb5       0x80 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
  .debug_loclists
-                0x0000cdd5     0x2e21 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+                0x0000ce35     0x2e21 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
  .debug_loclists
-                0x0000fbf6      0x425 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x0000fc56      0x425 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_loclists
-                0x0001001b      0xb26 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+                0x0001007b      0xb26 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
 .debug_aranges  0x00000000      0xc48
  .debug_aranges
@@ -9145,38 +9146,38 @@ LOAD linker stubs
  .debug_rnglists
                 0x00002f41      0x302 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
-.debug_line     0x00000000    0x16841
+.debug_line     0x00000000    0x16842
  .debug_line    0x00000000      0xaca CMakeFiles/univers_all.dir/univers_all.cpp.o
- .debug_line    0x00000aca     0x1c67 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
- .debug_line    0x00002731      0x8e1 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
- .debug_line    0x00003012     0x1ba5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x00004bb7      0x279 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x00004e30      0x800 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
- .debug_line    0x00005630      0x416 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x00005a46      0x396 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00005ddc     0x1701 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x000074dd      0x264 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
- .debug_line    0x00007741     0x1264 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
- .debug_line    0x000089a5     0x31b0 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
- .debug_line    0x0000bb55     0x1db5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x0000d90a     0x1eb5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x0000f7bf      0x4d9 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x0000fc98      0x32c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x0000ffc4      0xb0f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x00010ad3      0x3ad CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
- .debug_line    0x00010e80      0x419 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
- .debug_line    0x00011299      0x360 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x000115f9      0x30d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x00011906      0x6cd CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00011fd3      0x57a CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x0001254d      0x28f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_dcp.S.o
- .debug_line    0x000127dc      0x28e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x00012a6a      0x270 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
- .debug_line    0x00012cda      0x1eb CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x00012ec5     0x1ba8 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x00014a6d       0x9e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x00014b0b      0x88e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x00015399     0x14a8 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x00000aca     0x1c68 CMakeFiles/univers_all.dir/overlibs/Minory.cpp.o
+ .debug_line    0x00002732      0x8e1 CMakeFiles/univers_all.dir/overlibs/Patternbtn.cpp.o
+ .debug_line    0x00003013     0x1ba5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x00004bb8      0x279 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x00004e31      0x800 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/hardware_claim/claim.c.o
+ .debug_line    0x00005631      0x416 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x00005a47      0x396 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x00005ddd     0x1701 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x000074de      0x264 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x00007742     0x1264 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_sync/mutex.c.o
+ .debug_line    0x000089a6     0x31b0 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/common/pico_time/time.c.o
+ .debug_line    0x0000bb56     0x1db5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000d90b     0x1eb5 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x0000f7c0      0x4d9 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x0000fc99      0x32c CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x0000ffc5      0xb0f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x00010ad4      0x3ad CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+ .debug_line    0x00010e81      0x419 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+ .debug_line    0x0001129a      0x360 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x000115fa      0x30d CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x00011907      0x6cd CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00011fd4      0x57a CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x0001254e      0x28f CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_double/double_aeabi_dcp.S.o
+ .debug_line    0x000127dd      0x28e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x00012a6b      0x270 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+ .debug_line    0x00012cdb      0x1eb CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x00012ec6     0x1ba8 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x00014a6e       0x9e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x00014b0c      0x88e CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x0001539a     0x14a8 CMakeFiles/univers_all.dir/Users/qyour/.pico-sdk/sdk/2.2.0/src/rp2_common/pico_stdio/stdio.c.o
 
 .debug_str      0x00000000     0xfa12
  .debug_str     0x00000000     0xfa12 CMakeFiles/univers_all.dir/univers_all.cpp.o
